@@ -7,10 +7,13 @@ export default function Header({ onStartTour }: { onStartTour: () => void }) {
   return (
     <header className="text-center p-4 rounded-lg bg-brand-surface border border-brand-border relative">
       <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-        🧠 Axiom Cognitive Fabric
+        Iniity.com
       </h1>
-      <p className="mt-2 text-lg text-brand-text-secondary max-w-3xl mx-auto">
-        A sovereign, verifiable, event-sourced cognitive architecture combining identity, spatial awareness, purpose-driven planning, and AI-generated reasoning.
+      <h2 className="text-xl sm:text-2xl font-medium text-brand-text-secondary tracking-tight">
+        Cognitive Fabric Planner
+      </h2>
+      <p className="mt-4 text-lg text-brand-text-secondary max-w-3xl mx-auto">
+        A sovereign, verifiable, event-sourced cognitive architecture using <b className="text-brand-text">AuthO.iD</b> for identity and deployed on <b className="text-brand-text">Ethr.Cloud</b>.
       </p>
       <button 
         onClick={onStartTour}

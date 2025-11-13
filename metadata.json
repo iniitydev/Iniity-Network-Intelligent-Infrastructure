@@ -1,6 +1,6 @@
 {
-  "name": "Axiom Cognitive Fabric Planner",
-  "description": "An interactive dashboard to visualize, plan, and improve the Axiom Cognitive Fabric, a sovereign, event-sourced cognitive architecture. It includes an AI-powered system improver using the Gemini API.",
+  "name": "Iniity.com Cognitive Fabric Planner",
+  "description": "An interactive dashboard to visualize and plan the Iniity.com Cognitive Fabric, a sovereign cognitive architecture using AuthO.iD for identity and deployed on Ethr.Cloud.",
   "requestFramePermissions": [
     "microphone"
   ]

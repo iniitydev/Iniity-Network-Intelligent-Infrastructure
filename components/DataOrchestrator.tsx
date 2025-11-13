@@ -68,7 +68,7 @@ export default function DataOrchestrator() {
         <div className="p-6 rounded-lg bg-brand-surface border border-brand-border">
             <h2 className="text-xl font-bold text-white mb-2">Digital Twin Data Orchestrator</h2>
             <p className="mb-4 text-brand-text-secondary">
-                This is the control center for populating the digital twin. Each action simulates running a backend ingestion script that downloads, processes, and loads a foundational open-source dataset into the system's PostGIS, Neo4j, and object storage layers.
+                This is the control center for populating the digital twin. Each action simulates running an ingestion script that loads a foundational dataset into the <b className="text-brand-text">Ethr.Cloud</b> system's data layers.
             </p>
 
             <div className="mb-6 p-4 bg-brand-bg rounded-lg">

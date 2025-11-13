@@ -36,7 +36,7 @@ export default function RepoStructure() {
     <div className="p-6 rounded-lg bg-brand-surface border border-brand-border">
       <h2 className="text-xl font-bold text-white mb-4">Git Repository Structure</h2>
       <p className="mb-4 text-sm text-brand-text-secondary">
-        Refactored to a parent repository with submodules for core components. This allows each component (e.g., `axiom-core`, `agents`) to be developed, versioned, and tested independently.
+        Refactored to a parent repository with submodules for core components. This allows each component (e.g., `iniity-core`, `agents`) to be developed, versioned, and tested independently.
       </p>
       <div className="space-y-1">
         <TreeNode node={REPO_STRUCTURE} level={0} />

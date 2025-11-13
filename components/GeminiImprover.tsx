@@ -16,7 +16,7 @@ export default function GeminiImprover() {
     const principlesContext = `Foundational Principles:\n${PRINCIPLES.join('\n- ')}`;
     const pillarsContext = `Architectural Pillars:\n${PILLARS.map(p => `- ${p.name}: ${p.role} (Tech: ${p.coreTech})`).join('\n')}`;
     return `You are a world-class principal systems architect and AI strategist.
-You are reviewing a visionary project called "Axiom Cognitive Fabric".
+You are reviewing a visionary project called "Iniity.com Cognitive Fabric", which uses AuthO.iD for identity and is deployed on Ethr.Cloud.
 Here is the high-level summary of its architecture:
 ${principlesContext}
 \n${pillarsContext}
@@ -48,9 +48,9 @@ The user, the project's architect, has the following request for improvement, cr
   };
 
   const suggestions = [
-      "Identify potential security vulnerabilities in the IDENTITY layer and suggest mitigations.",
-      "Propose an alternative for SpacetimeDB and analyze the trade-offs.",
-      "How could we integrate a decentralized storage solution like IPFS?",
+      "Identify potential security vulnerabilities in the AuthO.iD layer and suggest mitigations.",
+      "How could the Ethr.Cloud fabric better support real-time data streams?",
+      "How could we integrate a decentralized storage solution like IPFS into Iniity?",
       "Brainstorm an innovative feature for the SPATIAL (WHERE) pillar."
   ];
 
@@ -58,10 +58,10 @@ The user, the project's architect, has the following request for improvement, cr
     <div className="p-6 rounded-lg bg-brand-surface border border-brand-border">
       <div className="flex items-center space-x-3 mb-4">
           <ZapIcon />
-          <h2 className="text-xl font-bold text-white">Axiom Invention Engine (Powered by Gemini)</h2>
+          <h2 className="text-xl font-bold text-white">Iniity Invention Engine (Powered by Gemini)</h2>
       </div>
       <p className="mb-4 text-brand-text-secondary">
-        Critique, improve, and invent. Leverage Gemini to reason about the Axiom architecture and discover new possibilities.
+        Critique, improve, and invent. Leverage Gemini to reason about the Iniity architecture and discover new possibilities.
       </p>
 
        <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-2">

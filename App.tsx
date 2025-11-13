@@ -43,8 +43,8 @@ export default function App() {
         
         <div id="improver-section"><GeminiImprover /></div>
 
-        <footer className="text-center text-brand-text-secondary text-sm py-8">
-          Built as a sovereign cognitive operating system planner.
+        <footer className="text-center text-brand-text-secondary text-sm py-8 font-mono">
+          Powered by Iniity.com | Deployed on Ethr.Cloud | Secured by AuthO.iD
         </footer>
       </div>
       {isTourActive && <AIGuidedTour steps={TOUR_STEPS} onComplete={() => setIsTourActive(false)} />}

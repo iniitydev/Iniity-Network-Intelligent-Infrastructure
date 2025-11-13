@@ -42,7 +42,7 @@ export default function Pillars() {
 
   return (
     <div className="p-6 rounded-lg bg-brand-surface border border-brand-border">
-      <h2 className="text-xl font-bold text-white mb-4">The 6 Pillars of Axiom</h2>
+      <h2 className="text-xl font-bold text-white mb-4">The 6 Pillars</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {PILLARS.map((pillar) => (
           <PillarCard 

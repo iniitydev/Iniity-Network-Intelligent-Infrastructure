@@ -5,10 +5,10 @@ import { Pillar, RoadmapPhase, FileTreeNode, TourStep } from './types';
 export const PRINCIPLES = [
   "Sovereignty First: All data, identity, and logic reside in your control.",
   "Event-Sourcing as Truth: The world state is a projection of an immutable, signed ledger of events.",
-  "Decentralized Identity as WHO: Every actor has a DID backed by Zitadel + Unomi.",
+  "Sovereign Identity via AuthO.iD: Every actor possesses a decentralized identifier (DID) managed by the AuthO.iD protocol.",
   "Spatial Dualism: Physical (GIS/H3) + digital (URI/SpacetimeDB) location fused into a digital twin.",
   "AI as Reasoning Layer: Gemini used for dynamic logic synthesis, not data storage.",
-  "Zero-Trust Mesh: Netbird secures all inter-service and user communication.",
+  "Secure Fabric on Ethr.Cloud: A zero-trust network mesh securing all inter-service and user communication.",
   "Cognitive Loop: Observe → Orient → Decide → Act → Log (OODAL), implemented as event-driven agents."
 ];
 
@@ -22,30 +22,30 @@ const ICONS = {
 }
 
 export const PILLARS: Pillar[] = [
-  { name: 'IDENTITY (WHO)', role: 'Verifiable agency & permissions', coreTech: 'Zitadel (IdP) + Apache Unomi', dataLayer: 'DIDs, VCs, consent graphs', agentType: 'Identity Agent', icon: ICONS.WHO },
+  { name: 'IDENTITY (AuthO.iD)', role: 'Verifiable agency & permissions', coreTech: 'AuthO.iD Protocol + Unomi', dataLayer: 'DIDs, VCs, consent graphs', agentType: 'Identity Agent', icon: ICONS.WHO },
   { name: 'PURPOSE (WHY)', role: 'Goal hierarchy, policy validation', coreTech: 'OPA + Neo4j (causal graph)', dataLayer: 'Goals, policies, ethical boundaries', agentType: 'Purpose Agent', icon: ICONS.WHY },
   { name: 'PLANNING (HOW)', role: 'Dynamic workflow synthesis', coreTech: 'Google AI Studio (Gemini) + n8n', dataLayer: 'Workflow DAGs, step templates', agentType: 'Planning Agent', icon: ICONS.HOW },
-  { name: 'ACTION (WHAT)', role: 'Event ingestion & emission', coreTech: 'SpacetimeDB (verifiable ledger)', dataLayer: 'Immutable AxiomEvents', agentType: 'Action/Sense Agent', icon: ICONS.WHAT },
+  { name: 'ACTION (WHAT)', role: 'Event ingestion & emission', coreTech: 'SpacetimeDB (verifiable ledger)', dataLayer: 'Immutable IniityEvents', agentType: 'Action/Sense Agent', icon: ICONS.WHAT },
   { name: 'TIME (WHEN)', role: 'Causal & physical time', coreTech: 'SpacetimeDB + InfluxDB', dataLayer: 'Vector clocks, TS metrics', agentType: 'Temporal Agent', icon: ICONS.WHEN },
   { name: 'SPACE (WHERE)', role: 'Dual-space world model', coreTech: 'PostGIS + SpacetimeDB + H3', dataLayer: 'Digital twin, asset graph', agentType: 'Spatial Agent', icon: ICONS.WHERE }
 ];
 
 export const AXIOM_EVENT_JSON = JSON.stringify({
-  "id": "ae:cid:bafybeig...xyz",
+  "id": "ie:cid:bafybeig...xyz",
   "type": "user.login.attempt",
   "timestamp": "2025-11-14T09:12:00.123Z",
   "vector_clock": [12, 45, 7],
   "who": {
-    "did": "did:axiom:user:alice",
+    "did": "did:autho:user:alice",
     "vc": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9..."
   },
   "where": {
     "physical": "8a2a12345678",
-    "digital": "https://netbird.axiom/user/login",
+    "digital": "https://login.ethr.cloud/",
     "ip": "192.168.100.5"
   },
   "why": {
-    "goal_id": "goal:security:zero-trust-login",
+    "goal_id": "goal:security:autho-login",
     "policy_match": "policy:geo-ip-restriction-v2"
   },
   "how": {
@@ -63,12 +63,12 @@ export const AXIOM_EVENT_JSON = JSON.stringify({
 }, null, 2);
 
 export const REPO_STRUCTURE: FileTreeNode = {
-  name: 'project-axiom/ (Parent Repo)',
+  name: 'project-iniity/',
   children: [
     { name: '.gitmodules' },
     { name: 'README.md' },
     { name: 'LICENSE' },
-    { name: 'axiom-core (submodule @ 1a2b3c4)' },
+    { name: 'iniity-core (submodule @ 1a2b3c4)' },
     { name: 'agents (submodule @ 5e6f7g8)' },
     { name: 'infrastructure (submodule @ 9i0j1k2)' },
     { name: 'prompts/', children: [
@@ -76,80 +76,80 @@ export const REPO_STRUCTURE: FileTreeNode = {
         { name: 'how/', children: [{ name: 'generate_plan.md' }, { name: 'optimize_workflow.md' }] },
         { name: 'what/', children: [{ name: 'parse_raw_input.md' }] }
     ]},
-    { name: 'docs/', children: [{ name: 'AxiomEvent_Spec.md' }, { name: 'Cognitive_Loop_Diagram.svg' }] },
+    { name: 'docs/', children: [{ name: 'IniityEvent_Spec.md' }, { name: 'Cognitive_Loop_Diagram.svg' }] },
     { name: '.devcontainer/' }
   ]
 };
 
 export const ROADMAP_PHASES: RoadmapPhase[] = [
-    { phase: 0, goal: 'Core Event Schema', deliverable: 'AxiomEvent JSON schema + validator' },
-    { phase: 1, goal: 'Identity + Network', deliverable: 'Zitadel + Netbird mesh working' },
+    { phase: 0, goal: 'Core Event Schema', deliverable: 'IniityEvent JSON schema + validator' },
+    { phase: 1, goal: 'Identity + Network', deliverable: 'AuthO.iD and Ethr.Cloud mesh integration' },
     { phase: 2, goal: 'Ledger + Sense', deliverable: 'SpacetimeDB + basic WHAT agent' },
     { phase: 3, goal: 'Purpose Engine', deliverable: 'WHY agent with OPA + AI prompt' },
     { phase: 4, goal: 'Planning + Action', deliverable: 'HOW → WHAT loop with real actions' },
     { phase: 5, goal: 'Spatial Twin', deliverable: 'PostGIS + H3 + URI mapping' },
-    { phase: 6, goal: 'Leon Integration', deliverable: 'Leon behind OIDC proxy, emits AxiomEvents' }
+    { phase: 6, goal: 'Voice Agent Integration', deliverable: 'Agent interaction via AuthO.iD' }
 ];
 
 export const TOUR_STEPS: TourStep[] = [
     {
         selector: '#header-section',
-        title: 'Welcome to the Axiom Cognitive Fabric',
+        title: 'Welcome to the Iniity.com Fabric',
         content: "This is your mission control for planning a sovereign AI. I'll be your guide and show you the key components. Let's begin!",
         placement: 'bottom',
     },
     {
         selector: '#principles-section',
         title: 'The Foundational Principles',
-        content: "Everything starts here. These 7 principles are the system's constitution, ensuring sovereignty, security, and trust.",
+        content: "Everything starts here. These principles are the system's constitution, ensuring sovereignty via AuthO.iD and security on Ethr.Cloud.",
         placement: 'bottom',
     },
     {
         selector: '#pillars-section',
-        title: 'The 6 Pillars of Axiom',
-        content: 'Next, meet the core functional blocks of the architecture. Each pillar has a distinct role, from Identity (WHO) to Space (WHERE). Click them to explore.',
+        title: 'The 6 Pillars',
+        content: 'Next, meet the core functional blocks. Notice how identity is explicitly handled by the AuthO.iD pillar, providing verifiable agency.',
         placement: 'top',
     },
     {
         selector: '#axiomevent-section',
-        title: 'The AxiomEvent',
+        title: 'The IniityEvent',
         content: "This is the lifeblood of the system. It's the atomic unit of truth, capturing every action and thought as a verifiable, immutable record.",
         placement: 'top',
     },
     {
         selector: '#loop-section',
         title: 'The Cognitive Loop',
-        content: "And this is how Axiom *thinks*. The OODAL loop is a continuous cycle of sensing the world, understanding context, and taking action.",
+        content: "And this is how the Iniity fabric *thinks*. The OODAL loop is a continuous cycle of sensing the world, understanding context, and taking action.",
         placement: 'left',
     },
     {
         selector: '#repo-section',
         title: 'Git Repository Structure',
-        content: "Under the hood, our project is modular. Using Git submodules keeps our code clean and allows each component to be versioned independently.",
+        content: "Under the hood, our project is modular. The `project-iniity` repository uses submodules to keep our code clean and independently versioned.",
         placement: 'left',
     },
     {
         selector: '#orchestrator-section',
         title: 'Digital Twin Data Orchestrator',
-        content: "This is where the twin comes to life. From here, you can manage and initiate the ingestion of real-world data for Earth, the Internet, and the Metaverse.",
+        content: "This is where the twin comes to life. From here, you can manage and initiate data ingestion into the Ethr.Cloud infrastructure.",
         placement: 'top',
     },
     {
         selector: '#roadmap-section',
         title: 'The Roadmap',
-        content: "Here's our path forward. You can track our progress as we build out each phase of this ambitious project.",
+        content: "Here's our path forward. You can track our progress as we build out each phase of this ambitious project on Iniity.com.",
         placement: 'top',
     },
     {
         selector: '#live-section',
         title: 'Live Conversation',
-        content: "Ready to interact? Use your voice to talk directly with a Gemini-powered assistant about the project in real-time.",
+        content: "Ready to interact? Use your voice to talk directly with a Gemini-powered assistant about the Iniity project in real-time.",
         placement: 'top',
     },
     {
         selector: '#improver-section',
         title: 'The Invention Engine',
-        content: "Now it's your turn to be the architect. Use this engine to challenge, critique, and improve the very fabric of Axiom. Let's build the future together.",
+        content: "Now it's your turn to be the architect. Use this engine to challenge, critique, and improve the very fabric of Iniity. Let's build the future together.",
         placement: 'top',
     }
 ];

@@ -126,7 +126,7 @@ export default function LiveConversation() {
         config: {
           responseModalities: [Modality.AUDIO],
           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Zephyr' } } },
-          systemInstruction: 'You are a helpful and friendly assistant, acting as a guide for the Iniity.com Cognitive Fabric project.',
+          systemInstruction: 'You are a helpful and friendly administrative assistant for the `desk.cx` Sovereign Desktop. You help users manage their personal cloud. Answer questions about users, device approvals, application permissions, and security policies.',
         },
         callbacks: {
           onopen: () => {
@@ -222,7 +222,7 @@ export default function LiveConversation() {
           <h2 className="text-xl font-bold text-white">Live Conversation (Powered by Gemini)</h2>
       </div>
       <p className="mb-4 text-brand-text-secondary">
-        Engage in a real-time voice conversation with a Gemini-powered assistant to discuss the Iniity.com architecture.
+        Engage in a real-time voice conversation with a Gemini-powered assistant to discuss and manage your personal identity network.
       </p>
       
       <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">

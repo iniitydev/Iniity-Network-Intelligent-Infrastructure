@@ -15,12 +15,13 @@ export default function GeminiImprover() {
   const createSystemContext = () => {
     const principlesContext = `Foundational Principles:\n${PRINCIPLES.join('\n- ')}`;
     const pillarsContext = `Architectural Pillars:\n${PILLARS.map(p => `- ${p.name}: ${p.role} (Tech: ${p.coreTech})`).join('\n')}`;
-    return `You are a world-class principal systems architect and AI strategist.
-You are reviewing a visionary project called "Iniity.com Cognitive Fabric", which uses AuthO.iD for identity and is deployed on Ethr.Cloud.
+    return `You are a world-class principal security architect and UX designer.
+You are reviewing a visionary project called "desk.cx", a Sovereign Desktop environment by Iniity.com. Its core is a unified dashboard that manages a user's entire personal cloud: their identity (AuthO.iD), devices, apps, and data.
+A key security feature is the "Embedded Identity Agent" that runs on every device and must be approved by the user in the desk.cx dashboard.
 Here is the high-level summary of its architecture:
 ${principlesContext}
 \n${pillarsContext}
-The user, the project's architect, has the following request for improvement, critique, or invention related to this system. Your response should be expert-level, insightful, and formatted using Markdown for clarity.`;
+The user, the project's architect, has a request for improvement or invention related to this user-centric management fabric. Your response should be expert-level, insightful, and formatted using Markdown for clarity.`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -48,10 +49,10 @@ The user, the project's architect, has the following request for improvement, cr
   };
 
   const suggestions = [
-      "Identify potential security vulnerabilities in the AuthO.iD layer and suggest mitigations.",
-      "How could the Ethr.Cloud fabric better support real-time data streams?",
-      "How could we integrate a decentralized storage solution like IPFS into Iniity?",
-      "Brainstorm an innovative feature for the SPATIAL (WHERE) pillar."
+      "Design a policy for revoking a device's Identity Agent if it's lost or stolen.",
+      "How would you securely handle inviting a new user to the identity fabric?",
+      "Suggest a UI/UX improvement for the device approval workflow.",
+      "Propose a 'Family' or 'Group' management feature for the `desk.cx` dashboard."
   ];
 
   return (
@@ -61,7 +62,7 @@ The user, the project's architect, has the following request for improvement, cr
           <h2 className="text-xl font-bold text-white">Iniity Invention Engine (Powered by Gemini)</h2>
       </div>
       <p className="mb-4 text-brand-text-secondary">
-        Critique, improve, and invent. Leverage Gemini to reason about the Iniity architecture and discover new possibilities.
+        Critique, improve, and invent. Leverage Gemini to reason about the `desk.cx` Sovereign Desktop and discover new possibilities.
       </p>
 
        <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -80,7 +81,7 @@ The user, the project's architect, has the following request for improvement, cr
         <textarea
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="e.g., 'What are the ethical implications of the PURPOSE (WHY) agent?'"
+          placeholder="e.g., 'How can I implement time-based access policies for applications?'"
           className="w-full h-24 p-3 bg-brand-bg border border-brand-border rounded-md focus:ring-2 focus:ring-brand-primary focus:outline-none font-mono text-sm"
           disabled={isLoading}
         />
